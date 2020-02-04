@@ -1,0 +1,30 @@
+{% extends 'modelo.html' %}
+
+{% block conteudo %}
+<h1>Lista de produtos</h1>
+<ul>
+    <li><a href="/detalhes?item=123">Relógio</a></li>
+    <li><a href="/detalhes?item=231">Celular</a></li>
+    <li><a href="/detalhes?item=321">Geladeira</a></li>
+</ul>
+
+<ol>{% for itens in frutas %}
+    <li>{{itens}}</li>
+    {% endfor %}
+</ol>
+
+
+
+<hr>
+{{frutas[0]}}
+</hr>
+
+
+{% if n1>=10 %}
+<p>Maior que 10</p>
+{% else %}
+<p>Menor que 10</p>
+{% endif %}
+
+
+{% endblock conteudo %}
